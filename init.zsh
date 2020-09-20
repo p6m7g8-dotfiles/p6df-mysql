@@ -1,7 +1,7 @@
 ######################################################################
 #<
 #
-# Function: p6df::modules::db::version()
+# Function: p6df::modules::mysql::version()
 #
 #>
 ######################################################################
@@ -10,7 +10,7 @@ p6df::modules::mysql::version() { echo "0.0.1" }
 ######################################################################
 #<
 #
-# Function: p6df::modules::db::external::brew()
+# Function: p6df::modules::mysql::external::brew()
 #
 #>
 ######################################################################
@@ -36,7 +36,7 @@ p6df::modules::mysql::external::brew() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::db::home::symlink()
+# Function: p6df::modules::mysql::home::symlink()
 #
 #>
 ######################################################################
@@ -45,6 +45,13 @@ p6df::modules::mysql::home::symlink() {
   ln -sf $P6_DFZ_SRC_P6M7G8_DIR/p6df-db/share/mysqlrc $P6_DFZ_DATA_DIR/.mysqlrc
 }
 
+######################################################################
+#<
+#
+# Function: p6df::modules::mysql::init()
+#
+#>
+######################################################################
 p6df::modules::mysql::init() {
 
   export MYSQL_PS1="\v \u@\h:\p (\d)>"

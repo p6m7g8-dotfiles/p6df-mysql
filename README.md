@@ -1,5 +1,6 @@
 ### init.zsh:
-- p6df::modules::db::external::brew()
-- p6df::modules::db::home::symlink()
-- p6df::modules::db::version()
+- p6df::modules::mysql::external::brew()
+- p6df::modules::mysql::home::symlink()
+- p6df::modules::mysql::init()
+- p6df::modules::mysql::version()
 
