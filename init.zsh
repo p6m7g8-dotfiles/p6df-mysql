@@ -17,7 +17,7 @@ p6df::modules::mysql::version() { echo "0.0.1" }
 p6df::modules::mysql::external::brew() {
 
   brew install innotop
-
+ 
   brew install percona-server
   brew install percona-toolkit
 
@@ -25,6 +25,7 @@ p6df::modules::mysql::external::brew() {
   # brew install mysql
   # brew install mariadb
 
+  brew install sysbench
   brew install mytop
   brew install mysqltuner
   brew install mycli
@@ -57,13 +58,10 @@ p6df::modules::mysql::init() {
   export MYSQL_PS1="\v \u@\h:\p (\d)>"
 }
 
-# We've installed your MySQL database without a root password. To secure it run:
-#    mysql_secure_installation
-# MySQL is configured to only allow connections from localhost by default
-# To connect run:
-#    mysql -uroot
-#
-# To have launchd start percona-server now and restart at login:
-#    brew services start percona-server
-# Or, if you don't want/need a background service you can just run:
-#    mysql.server start
+p6df::modules::mysql::external::services::start() {
+    brew services start percona-server
+}
+
+p6df::modules::mysql::external::start() {
+    mysql.server start
+}
