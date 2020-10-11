@@ -5,5 +5,4 @@
 - p6df::modules::mysql::external::start()
 - p6df::modules::mysql::home::symlink()
 - p6df::modules::mysql::init()
-- p6df::modules::mysql::version()
 
