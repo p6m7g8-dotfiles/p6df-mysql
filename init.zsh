@@ -36,7 +36,7 @@ p6df::modules::mysql::external::brew() {
   brew install mycli
   brew install mydumper
 
-  brew cask install mysqlworkbench
+  brew install --cask mysqlworkbench
 }
 
 ######################################################################
