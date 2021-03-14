@@ -38,9 +38,11 @@
 
 - [Change Log](CHANGELOG.md)
 
-### Usage
+## Usage
 
-#### init.zsh:
+### p6df-mysql:
+
+#### p6df-mysql/init.zsh:
 
 - p6df::modules::mysql::deps()
 - p6df::modules::mysql::external::brew()
