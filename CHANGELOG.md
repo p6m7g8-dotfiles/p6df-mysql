@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/p6m7g8/p6df-mysql/compare/v2.1.0...v2.1.1) (2021-04-04)
+
+
+* **README:** updates generator ([#13](https://github.com/p6m7g8/p6df-mysql/issues/13)) ([866ffe7](https://github.com/p6m7g8/p6df-mysql/commit/866ffe7733b3294a0291982c216ad0c8c968d232))
+* Coc -> .github ([4cd853b](https://github.com/p6m7g8/p6df-mysql/commit/4cd853be96ed0efe9187ebfd0f3a82413a3ed35f))
+
 ## [2.1.0](https://github.com/p6m7g8/p6df-mysql/compare/v2.0.0...v2.1.0) (2020-12-06)
 
 
