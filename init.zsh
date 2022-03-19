@@ -48,7 +48,7 @@ p6df::modules::mysql::external::brew() {
 ######################################################################
 p6df::modules::mysql::home::symlink() {
 
-  ln -sf $P6_DFZ_SRC_P6M7G8_DIR/p6df-db/share/mysqlrc $P6_DFZ_DATA_DIR/.mysqlrc
+  ln -sf $P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-db/share/mysqlrc $P6_DFZ_DATA_DIR/.mysqlrc
 }
 
 ######################################################################
