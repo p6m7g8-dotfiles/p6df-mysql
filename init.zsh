@@ -42,18 +42,6 @@ p6df::modules::mysql::external::brew() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::mysql::home::symlink()
-#
-#>
-######################################################################
-p6df::modules::mysql::home::symlink() {
-
-  ln -sf $P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-db/share/mysqlrc $P6_DFZ_DATA_DIR/.mysqlrc
-}
-
-######################################################################
-#<
-#
 # Function: p6df::modules::mysql::init()
 #
 #>
