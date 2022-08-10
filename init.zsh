@@ -1,4 +1,4 @@
-
+# shellcheck shell=bash
 ######################################################################
 #<
 #
@@ -17,6 +17,7 @@ p6df::modules::mysql::deps() {
 #
 # Function: p6df::modules::mysql::external::brew()
 #
+#  Environment:	 XXX
 #>
 ######################################################################
 p6df::modules::mysql::external::brew() {
@@ -37,6 +38,8 @@ p6df::modules::mysql::external::brew() {
   brew install mydumper
 
   brew install --cask mysqlworkbench
+
+  p6_return_void
 }
 
 ######################################################################
@@ -44,11 +47,14 @@ p6df::modules::mysql::external::brew() {
 #
 # Function: p6df::modules::mysql::home::symlink()
 #
+#  Environment:	 P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
 p6df::modules::mysql::home::symlink() {
 
-  ln -sf $P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-db/share/mysqlrc $P6_DFZ_DATA_DIR/.mysqlrc
+  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-db/share/mysqlrc" "$P6_DFZ_DATA_DIR/.mysqlrc"
+
+  p6_return_void
 }
 
 ######################################################################
@@ -56,11 +62,14 @@ p6df::modules::mysql::home::symlink() {
 #
 # Function: p6df::modules::mysql::init()
 #
+#  Environment:	 MYSQL_PS1
 #>
 ######################################################################
 p6df::modules::mysql::init() {
 
-  export MYSQL_PS1="\v \u@\h:\p (\d)>"
+  p6_env_export MYSQL_PS1 "\v \u@\h:\p (\d)>"
+
+  p6_return_void
 }
 
 ######################################################################
@@ -71,7 +80,8 @@ p6df::modules::mysql::init() {
 #>
 ######################################################################
 p6df::modules::mysql::external::services::start() {
-    brew services start percona-server
+
+  brew services start percona-server
 }
 
 ######################################################################
@@ -82,5 +92,6 @@ p6df::modules::mysql::external::services::start() {
 #>
 ######################################################################
 p6df::modules::mysql::external::start() {
+
     mysql.server start
 }
