@@ -23,7 +23,7 @@ p6df::modules::mysql::deps() {
 p6df::modules::mysql::external::brew() {
 
   brew install innotop
- 
+
   brew install percona-server
   brew install percona-toolkit
 
@@ -32,7 +32,6 @@ p6df::modules::mysql::external::brew() {
   # brew install mariadb
 
   brew install sysbench
-  brew install mytop
   brew install mysqltuner
   brew install mycli
   brew install mydumper
@@ -93,5 +92,5 @@ p6df::modules::mysql::external::services::start() {
 ######################################################################
 p6df::modules::mysql::external::start() {
 
-    mysql.server start
+  mysql.server start
 }
