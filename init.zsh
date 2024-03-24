@@ -22,21 +22,21 @@ p6df::modules::mysql::deps() {
 ######################################################################
 p6df::modules::mysql::external::brew() {
 
-  brew install innotop
+  p6df::modules::homebrew::cli::brew::install innotop
 
-  brew install percona-server
-  brew install percona-toolkit
+  p6df::modules::homebrew::cli::brew::install percona-server
+  p6df::modules::homebrew::cli::brew::install percona-toolkit
 
   # XXX: CONFLICTS
-  # brew install mysql
-  # brew install mariadb
+  # p6df::modules::homebrew::cli::brew::install mysql
+  # p6df::modules::homebrew::cli::brew::install mariadb
 
-  brew install sysbench
-  brew install mysqltuner
-  brew install mycli
-  brew install mydumper
+  p6df::modules::homebrew::cli::brew::install sysbench
+  p6df::modules::homebrew::cli::brew::install mysqltuner
+  p6df::modules::homebrew::cli::brew::install mycli
+  p6df::modules::homebrew::cli::brew::install mydumper
 
-  brew install --cask mysqlworkbench
+  p6df::modules::homebrew::cli::brew::install --cask mysqlworkbench
 
   p6_return_void
 }
@@ -59,38 +59,22 @@ p6df::modules::mysql::home::symlink() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::mysql::init()
+# Function: p6df::modules::mysql::init(_module, dir)
+#
+#  Args:
+#	_module -
+#	dir -
 #
 #  Environment:	 MYSQL_PS1
 #>
 ######################################################################
 p6df::modules::mysql::init() {
+  local _module="$1"
+  local dir="$2"
+
+  p6_bootstrap "$dir"
 
   p6_env_export MYSQL_PS1 "\v \u@\h:\p (\d)>"
 
   p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::mysql::external::services::start()
-#
-#>
-######################################################################
-p6df::modules::mysql::external::services::start() {
-
-  brew services start percona-server
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::mysql::external::start()
-#
-#>
-######################################################################
-p6df::modules::mysql::external::start() {
-
-  mysql.server start
 }
