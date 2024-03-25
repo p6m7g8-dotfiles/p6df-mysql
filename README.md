@@ -19,7 +19,6 @@
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/p6m7g8/p6df-mysql)
 [![Mergify](https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges/p6m7g8/p6df-mysql/&style=flat)](https://mergify.io)
 [![codecov](https://codecov.io/gh/p6m7g8/p6df-mysql/branch/master/graph/badge.svg?token=14Yj1fZbew)](https://codecov.io/gh/p6m7g8/p6df-mysql)
-[![Known Vulnerabilities](https://snyk.io/test/github/p6m7g8/p6df-mysql/badge.svg?targetFile=package.json)](https://snyk.io/test/github/p6m7g8/p6df-mysql?targetFile=package.json)
 [![Gihub repo dependents](https://badgen.net/github/dependents-repo/p6m7g8/p6df-mysql)](https://github.com/p6m7g8/p6df-mysql/network/dependents?dependent_type=REPOSITORY)
 [![Gihub package dependents](https://badgen.net/github/dependents-pkg/p6m7g8/p6df-mysql)](https://github.com/p6m7g8/p6df-mysql/network/dependents?dependent_type=PACKAGE)
 
