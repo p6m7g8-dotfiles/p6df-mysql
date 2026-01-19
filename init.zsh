@@ -17,7 +17,6 @@ p6df::modules::mysql::deps() {
 #
 # Function: p6df::modules::mysql::external::brew()
 #
-#  Environment:	 XXX
 #>
 ######################################################################
 p6df::modules::mysql::external::brew() {
@@ -46,7 +45,7 @@ p6df::modules::mysql::external::brew() {
 #
 # Function: p6df::modules::mysql::home::symlink()
 #
-#  Environment:	 P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
+#  Environment:	 P6_DFZ_DATA_DIR P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
 p6df::modules::mysql::home::symlink() {
