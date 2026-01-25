@@ -21,21 +21,21 @@ p6df::modules::mysql::deps() {
 ######################################################################
 p6df::modules::mysql::external::brew() {
 
-  p6df::modules::homebrew::cli::brew::install innotop
+  p6df::core::homebrew::cli::brew::install innotop
 
-  p6df::modules::homebrew::cli::brew::install percona-server
-  p6df::modules::homebrew::cli::brew::install percona-toolkit
+  p6df::core::homebrew::cli::brew::install percona-server
+  p6df::core::homebrew::cli::brew::install percona-toolkit
 
   # XXX: CONFLICTS
-  # p6df::modules::homebrew::cli::brew::install mysql
-  # p6df::modules::homebrew::cli::brew::install mariadb
+  # p6df::core::homebrew::cli::brew::install mysql
+  # p6df::core::homebrew::cli::brew::install mariadb
 
-  p6df::modules::homebrew::cli::brew::install sysbench
-  p6df::modules::homebrew::cli::brew::install mysqltuner
-  p6df::modules::homebrew::cli::brew::install mycli
-  p6df::modules::homebrew::cli::brew::install mydumper
+  p6df::core::homebrew::cli::brew::install sysbench
+  p6df::core::homebrew::cli::brew::install mysqltuner
+  p6df::core::homebrew::cli::brew::install mycli
+  p6df::core::homebrew::cli::brew::install mydumper
 
-  p6df::modules::homebrew::cli::brew::install --cask mysqlworkbench
+  p6df::core::homebrew::cli::brew::install --cask mysqlworkbench
 
   p6_return_void
 }
