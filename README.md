@@ -39,6 +39,9 @@ TODO: Add a short summary of this module.
 - `p6df::modules::mysql::external::brew()`
 - `p6df::modules::mysql::home::symlink()`
 - `p6df::modules::mysql::init(_module, dir)`
+  - Args:
+    - _module - 
+    - dir - 
 
 #### p6df-mysql/lib
 
