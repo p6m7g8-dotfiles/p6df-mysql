@@ -17,7 +17,9 @@
 
 ## Summary
 
-TODO: Add a short summary of this module.
+p6df module for MySQL: CLI tools (`mycli`, `percona-toolkit`, `mysqltuner`),
+prompt integration, and MCP server (`mysql-mcp-server` via npm) for
+AI-driven database querying and schema exploration.
 
 ## Contributing
 
@@ -40,8 +42,9 @@ TODO: Add a short summary of this module.
 - `p6df::modules::mysql::home::symlink()`
 - `p6df::modules::mysql::init(_module, dir)`
   - Args:
-    - _module - 
-    - dir - 
+    - _module
+    - dir
+- `p6df::modules::mysql::mcp()`
 
 #### p6df-mysql/lib
 
