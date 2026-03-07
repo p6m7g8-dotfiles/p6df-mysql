@@ -77,3 +77,17 @@ p6df::modules::mysql::init() {
 
   p6_return_void
 }
+
+######################################################################
+#<
+#
+# Function: p6df::modules::mysql::mcp()
+#
+#>
+######################################################################
+p6df::modules::mysql::mcp() {
+
+  p6_js_npm_global_install "mysql-mcp-server"
+
+  p6_return_void
+}
