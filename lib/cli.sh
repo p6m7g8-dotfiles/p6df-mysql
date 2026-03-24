@@ -8,5 +8,5 @@
 ######################################################################
 p6df::modules::mysql::cli::start() {
 
-  brew services start percona-server
+  p6df::core::homebrew::cmd::brew services start percona-server
 }
