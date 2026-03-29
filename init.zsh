@@ -15,11 +15,11 @@ p6df::modules::mysql::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::mysql::external::brew()
+# Function: p6df::modules::mysql::external::brews()
 #
 #>
 ######################################################################
-p6df::modules::mysql::external::brew() {
+p6df::modules::mysql::external::brews() {
 
   p6df::core::homebrew::cli::brew::install innotop
 
