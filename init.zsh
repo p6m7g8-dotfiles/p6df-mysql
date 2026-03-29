@@ -43,12 +43,12 @@ p6df::modules::mysql::external::brews() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::mysql::home::symlink()
+# Function: p6df::modules::mysql::home::symlinks()
 #
 #  Environment:	 P6_DFZ_DATA_DIR P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
-p6df::modules::mysql::home::symlink() {
+p6df::modules::mysql::home::symlinks() {
 
   p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-db/share/mysqlrc" "$P6_DFZ_DATA_DIR/.mysqlrc"
 
