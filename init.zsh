@@ -89,5 +89,8 @@ p6df::modules::mysql::mcp() {
 
   p6_js_npm_global_install "mysql-mcp-server"
 
+  p6df::modules::anthropic::mcp::server::add "mysql" "npx" "-y" "mysql-mcp-server"
+  p6df::modules::openai::mcp::server::add "mysql" "npx" "-y" "mysql-mcp-server"
+
   p6_return_void
 }
