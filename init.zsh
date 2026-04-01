@@ -102,6 +102,6 @@ p6df::modules::mysql::mcp() {
 ######################################################################
 p6df::modules::mysql::profile::mod() {
 
-  p6_return_words 'mysql' '$MYSQL_HOST'
+  p6_return_words 'mysql' "$"
 }
 
