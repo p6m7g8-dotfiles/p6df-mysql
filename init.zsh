@@ -58,21 +58,15 @@ p6df::modules::mysql::home::symlinks() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::mysql::init(_module, dir)
-#
-#  Args:
-#	_module -
-#	dir -
+# Function: p6df::modules::mysql::env::init()
 #
 #  Environment:	 MYSQL_PS1
 #>
 ######################################################################
-p6df::modules::mysql::init() {
+p6df::modules::mysql::env::init() {
+
   local _module="$1"
-  local dir="$2"
-
-  p6_bootstrap "$dir"
-
+  local _dir="$2"
   p6_env_export MYSQL_PS1 "\v \u@\h:\p (\d)>"
 
   p6_return_void
@@ -94,3 +88,20 @@ p6df::modules::mysql::mcp() {
 
   p6_return_void
 }
+
+######################################################################
+#<
+#
+# Function: words mysql $MYSQL_HOST = p6df::modules::mysql::profile::mod()
+#
+#  Returns:
+#	words - mysql $MYSQL_HOST
+#
+#  Environment:	 MYSQL_HOST
+#>
+######################################################################
+p6df::modules::mysql::profile::mod() {
+
+  p6_return_words 'mysql' "$"
+}
+
