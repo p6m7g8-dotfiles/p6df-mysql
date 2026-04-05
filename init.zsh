@@ -15,27 +15,16 @@ p6df::modules::mysql::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::mysql::external::brews()
+# Function: p6df::modules::mysql::env::init()
 #
+#  Environment:	 MYSQL_PS1
 #>
 ######################################################################
-p6df::modules::mysql::external::brews() {
+p6df::modules::mysql::env::init() {
 
-  p6df::core::homebrew::cli::brew::install innotop
-
-  p6df::core::homebrew::cli::brew::install percona-server
-  p6df::core::homebrew::cli::brew::install percona-toolkit
-
-  # XXX: CONFLICTS
-  # p6df::core::homebrew::cli::brew::install mysql
-  # p6df::core::homebrew::cli::brew::install mariadb
-
-  p6df::core::homebrew::cli::brew::install sysbench
-  p6df::core::homebrew::cli::brew::install mysqltuner
-  p6df::core::homebrew::cli::brew::install mycli
-  p6df::core::homebrew::cli::brew::install mydumper
-
-  p6df::core::homebrew::cli::brew::install --cask mysqlworkbench
+  local _module="$1"
+  local _dir="$2"
+  p6_env_export MYSQL_PS1 "\v \u@\h:\p (\d)>"
 
   p6_return_void
 }
@@ -58,16 +47,27 @@ p6df::modules::mysql::home::symlinks() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::mysql::env::init()
+# Function: p6df::modules::mysql::external::brews()
 #
-#  Environment:	 MYSQL_PS1
 #>
 ######################################################################
-p6df::modules::mysql::env::init() {
+p6df::modules::mysql::external::brews() {
 
-  local _module="$1"
-  local _dir="$2"
-  p6_env_export MYSQL_PS1 "\v \u@\h:\p (\d)>"
+  p6df::core::homebrew::cli::brew::install innotop
+
+  p6df::core::homebrew::cli::brew::install percona-server
+  p6df::core::homebrew::cli::brew::install percona-toolkit
+
+  # XXX: CONFLICTS
+  # p6df::core::homebrew::cli::brew::install mysql
+  # p6df::core::homebrew::cli::brew::install mariadb
+
+  p6df::core::homebrew::cli::brew::install sysbench
+  p6df::core::homebrew::cli::brew::install mysqltuner
+  p6df::core::homebrew::cli::brew::install mycli
+  p6df::core::homebrew::cli::brew::install mydumper
+
+  p6df::core::homebrew::cli::brew::install --cask mysqlworkbench
 
   p6_return_void
 }
