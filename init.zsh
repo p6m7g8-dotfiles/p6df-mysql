@@ -15,7 +15,11 @@ p6df::modules::mysql::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::mysql::env::init()
+# Function: p6df::modules::mysql::env::init(_module, _dir)
+#
+#  Args:
+#	_module -
+#	_dir -
 #
 #  Environment:	 MYSQL_PS1
 #>
@@ -92,12 +96,12 @@ p6df::modules::mysql::mcp() {
 ######################################################################
 #<
 #
-# Function: words mysql $MYSQL_HOST = p6df::modules::mysql::profile::mod()
+# Function: words mysql = p6df::modules::mysql::profile::mod()
 #
 #  Returns:
-#	words - mysql $MYSQL_HOST
+#	words - mysql
 #
-#  Environment:	 MYSQL_HOST
+#  Environment:	 MYSQL_HOME MYSQL_HOST
 #>
 ######################################################################
 p6df::modules::mysql::profile::mod() {
