@@ -17,9 +17,7 @@
 
 ## Summary
 
-p6df module for MySQL: CLI tools (`mycli`, `percona-toolkit`, `mysqltuner`),
-prompt integration, and MCP server (`mysql-mcp-server` via npm) for
-AI-driven database querying and schema exploration.
+TODO: Add a short summary of this module.
 
 ## Contributing
 
@@ -38,13 +36,14 @@ AI-driven database querying and schema exploration.
 ##### p6df-mysql/init.zsh
 
 - `p6df::modules::mysql::deps()`
-- `p6df::modules::mysql::external::brew()`
-- `p6df::modules::mysql::home::symlink()`
-- `p6df::modules::mysql::init(_module, dir)`
+- `p6df::modules::mysql::env::init(_module, _dir)`
   - Args:
     - _module
-    - dir
+    - _dir
+- `p6df::modules::mysql::external::brews()`
+- `p6df::modules::mysql::home::symlinks()`
 - `p6df::modules::mysql::mcp()`
+- `words mysql = p6df::modules::mysql::profile::mod()`
 
 #### p6df-mysql/lib
 
